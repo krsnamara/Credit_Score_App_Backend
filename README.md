@@ -1,6 +1,6 @@
 # Credit-Suzzie
 
-General Assembly Hackathon Summer August 14th 2023
+General Assembly Hackathon Summer August 14th 2023 
 
 ## Prompt
 
