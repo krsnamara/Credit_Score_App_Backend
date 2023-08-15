@@ -1,21 +1,21 @@
 const express = require('express');
 const sampleRouter = express.Router();
 const Samples = require('../models/samplesModel');
-const isAuth = require('../utils/isAuth');
+// const isAuth = require('../utils/isAuth');
 
 // Seed Route
 
-const seed = require('../data/sampleSeed.js');
-sampleRouter.get('/seed', async (req, res) => {
-  try {
-    await Samples.deleteMany({});
-    const data = await Samples.create(seed);
-    res.redirect('/');
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ error: 'Faild to seed data' });
-  }
-});
+// const seed = require('../data/sampleSeed.js');
+// sampleRouter.get('/seed', async (req, res) => {
+//   try {
+//     await Samples.deleteMany({});
+//     const data = await Samples.create(seed);
+//     res.redirect('/');
+//   } catch (error) {
+//     console.log(error);
+//     res.status(500).json({ error: 'Faild to seed data' });
+//   }
+// });
 
 // Index Route
 
@@ -36,7 +36,7 @@ sampleRouter.get('/', async (req, res) => {
 
 sampleRouter.post('/', async (req, res) => {
   try {
-    req.body.uid = req.user.uid;
+    // req.body.uid = req.user.uid;
     const newSample = await Samples.create(req.body);
     res.json(newSample);
   } catch (error) {
@@ -63,7 +63,7 @@ sampleRouter.put('/:id', async (req, res) => {
 
 // Delete Route
 
-sampleRouter.delete('/:id', isAuth, async (req, res) => {
+sampleRouter.delete('/:id', async (req, res) => {
   try {
     const deletedSample = await Samples.findByIdAndRemove(req.params.id);
     res.json(deletedSample);
