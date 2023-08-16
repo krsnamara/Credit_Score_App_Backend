@@ -7,7 +7,7 @@ const InfoSchema = new Schema(
     Delinquency: { type: String, required: true },
     unsecuredLines: { type: Number, required: true },
     ThirtytoFiftyNineDaysPastDue: { type: Number, required: false },
-    debtRatio: { type: Number, required: true },
+    MonthlyExpenses: { type: Number, required: true },
     MonthlyIncome: { type: Number, required: true },
     NumberofOpenCreditLinesandLoans: { type: Number, required: true },
     NumberofTimes90DaysLate: { type: Number, required: false },
