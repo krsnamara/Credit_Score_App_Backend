@@ -1,7 +1,7 @@
 const express = require('express');
 const sampleRouter = express.Router();
 const Samples = require('../models/samplesModel');
-// const isAuth = require('../utils/isAuth');
+const isAuthenticated = require('../utils/isAuth');
 
 // Seed Route
 
@@ -19,7 +19,7 @@ const Samples = require('../models/samplesModel');
 
 // Index Route
 
-sampleRouter.get('/', async (req, res) => {
+sampleRouter.get('/', isAuthenticated, async (req, res) => {
   try {
     if (req.user) {
       res.json(await Samples.find({ uid: req.user.uid }));
@@ -34,7 +34,7 @@ sampleRouter.get('/', async (req, res) => {
 
 // Create Route
 
-sampleRouter.post('/', async (req, res) => {
+sampleRouter.post('/', isAuthenticated, async (req, res) => {
   try {
     // take authenticated user id and attach to request body
     // send the user id to the database when object is created
@@ -50,7 +50,7 @@ sampleRouter.post('/', async (req, res) => {
 
 // Update Route
 
-sampleRouter.put('/:id', async (req, res) => {
+sampleRouter.put('/:id', isAuthenticated, async (req, res) => {
   try {
     const updatedSample = await Samples.findByIdAndUpdate(
       req.params.id,
@@ -66,7 +66,7 @@ sampleRouter.put('/:id', async (req, res) => {
 
 // Delete Route
 
-sampleRouter.delete('/:id', async (req, res) => {
+sampleRouter.delete('/:id', isAuthenticated, async (req, res) => {
   try {
     const deletedSample = await Samples.findByIdAndRemove(req.params.id);
     res.json(deletedSample);
@@ -78,7 +78,7 @@ sampleRouter.delete('/:id', async (req, res) => {
 
 // Show Route
 
-sampleRouter.get('/:id', async (req, res) => {
+sampleRouter.get('/:id', isAuthenticated, async (req, res) => {
   try {
     const sample = await Samples.findById(req.params.id);
     res.json(sample);
