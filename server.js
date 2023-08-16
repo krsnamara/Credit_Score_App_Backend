@@ -1,20 +1,20 @@
-const mongoose = require('mongoose');
-const express = require('express');
-const cors = require('cors');
-const morgan = require('morgan');
-require('dotenv').config();
+const mongoose = require('mongoose')
+const express = require('express')
+const cors = require('cors')
+const morgan = require('morgan')
+require('dotenv').config()
 // const admin = require('firebase-admin');
 // const { getAuth } = require('firebase-admin/auth');
 
 const {
   PORT = 4000,
-  MONGODB_URL,
+  MONGODB_URL
   //   PRIVATE_KEY_ID,
   //   PRIVATE_KEY,
   //   CLIENT_ID,
-} = process.env;
+} = process.env
 
-const app = express();
+const app = express()
 
 // admin.initializeApp({
 //   credential: admin.credential.cert({
@@ -36,28 +36,28 @@ const app = express();
 // Database Connection //
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGODB_URL);
-    console.log(`MongoDB Connected: ${conn.connection.host}`);
+    const conn = await mongoose.connect(process.env.MONGODB_URL)
+    console.log(`MongoDB Connected: ${conn.connection.host}`)
   } catch (error) {
-    console.log(error);
-    process.exit(1);
+    console.log(error)
+    process.exit(1)
   }
-};
+}
 
 // Establish Connect //
-connectDB();
+connectDB()
 
 mongoose.connection
   .on('open', () => console.log('You are connected to mongoose'))
   .on('close', () => console.log('You are disconnected from mongoose'))
-  .on('error', (error) => console.log(error));
+  .on('error', (error) => console.log(error))
 
-mongoose.set('strictQuery', true);
+mongoose.set('strictQuery', true)
 
 // Middleware //
-app.use(cors());
-app.use(morgan('dev'));
-app.use(express.json());
+app.use(cors())
+app.use(morgan('dev'))
+app.use(express.json())
 
 // // Auth Middleware //
 // app.use(async function (req, res, next) {
@@ -78,13 +78,15 @@ app.use(express.json());
 // });
 
 // Controller //
-const sampleController = require('./controllers/sample');
-app.use('/test', sampleController);
+const sampleController = require('./controllers/sample')
+app.use('/test', sampleController)
+const infoController = require('./controllers/info')
+app.use('/info', infoController)
 
 // Test Route //
 app.get('/', (req, res) => {
-  res.send('Hello World');
-});
+  res.send('Hello World')
+})
 
 // Listener //
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
