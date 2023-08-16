@@ -22,7 +22,7 @@ const Samples = require('../models/samplesModel');
 sampleRouter.get('/', async (req, res) => {
   try {
     if (req.user) {
-      res.json(await Samples.find());
+      res.json(await Samples.find({ uid: req.user.uid }));
     } else {
       res.json(await Samples.find({ uid: null }));
     }
@@ -36,7 +36,10 @@ sampleRouter.get('/', async (req, res) => {
 
 sampleRouter.post('/', async (req, res) => {
   try {
-    // req.body.uid = req.user.uid;
+    // take authenticated user id and attach to request body
+    // send the user id to the database when object is created
+    req.body.uid = req.user.uid;
+    // send all sample data
     const newSample = await Samples.create(req.body);
     res.json(newSample);
   } catch (error) {
