@@ -5,6 +5,7 @@ const InfoSchema = new Schema(
   {
     DOB: { type: String, required: true },
     Delinquency: { type: String, required: true },
+    HomeOwnership: { type: String, required: true },
     unsecuredLines: { type: Number, required: true },
     ThirtytoFiftyNineDaysPastDue: { type: Number, required: false },
     debtRatio: { type: Number, required: true },
