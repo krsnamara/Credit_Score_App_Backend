@@ -14,7 +14,7 @@ const {
   CLIENT_ID,
 } = process.env;
 
-const app = express()
+const app = express();
 
 admin.initializeApp({
   credential: admin.credential.cert({
@@ -37,28 +37,28 @@ admin.initializeApp({
 // Database Connection //
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGODB_URL)
-    console.log(`MongoDB Connected: ${conn.connection.host}`)
+    const conn = await mongoose.connect(MONGODB_URL);
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
-    console.log(error)
-    process.exit(1)
+    console.log(error);
+    process.exit(1);
   }
-}
+};
 
 // Establish Connect //
-connectDB()
+connectDB();
 
 mongoose.connection
   .on('open', () => console.log('You are connected to mongoose'))
   .on('close', () => console.log('You are disconnected from mongoose'))
-  .on('error', (error) => console.log(error))
+  .on('error', (error) => console.log(error));
 
-mongoose.set('strictQuery', true)
+mongoose.set('strictQuery', true);
 
 // Middleware //
-app.use(cors())
-app.use(morgan('dev'))
-app.use(express.json())
+app.use(cors());
+app.use(morgan('dev'));
+app.use(express.json());
 
 // Auth Middleware //
 app.use(async function (req, res, next) {
@@ -81,15 +81,15 @@ app.use(async function (req, res, next) {
 });
 
 // Controller //
-const sampleController = require('./controllers/sample')
-app.use('/test', sampleController)
-const infoController = require('./controllers/info')
-app.use('/info', infoController)
+const sampleController = require('./controllers/sample');
+app.use('/test', sampleController);
+const infoController = require('./controllers/info');
+app.use('/info', infoController);
 
 // Test Route //
 app.get('/', (req, res) => {
-  res.send('Hello World')
-})
+  res.send('Hello World');
+});
 
 // Listener //
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
