@@ -37,7 +37,7 @@ admin.initializeApp({
 // Database Connection //
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGODB_URL);
+    const conn = await mongoose.connect(MONGODB_URL);
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
     console.log(error);
@@ -83,6 +83,8 @@ app.use(async function (req, res, next) {
 // Controller //
 const sampleController = require('./controllers/sample');
 app.use('/test', sampleController);
+const infoController = require('./controllers/info');
+app.use('/info', infoController);
 
 // Test Route //
 app.get('/', (req, res) => {
