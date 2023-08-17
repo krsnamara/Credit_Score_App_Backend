@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const InfoSchema = new Schema(
   {
-    DOB: { type: String },
+    Age: { type: String },
     NumberOfDependents: { type: String },
     MonthlyIncome: { type: String },
     MonthlyExpenses: { type: String },
