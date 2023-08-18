@@ -1,6 +1,12 @@
-# Credit-Suzzie
+# ScoreEase
 
-General Assembly Hackathon Summer August 14th 2023
+General Assembly Hackathon Summer August 14th 2023!
+
+# 💸 Financial Literacy Hackathon 2023
+
+# Description
+
+Embark on a seamless credit journey with our innovative web application. ScoreEase introduces a user-friendly interface that seamlessly combines the power of real-time data analysis with the entirety of your financial history. Say farewell to complex credit assessments and embrace a new era of simplicity and accuracy, as ScoreEase effortlessly allows borrowers to view credit and loans by tapping into their complete financial narrative, all at your fingertips.
 
 ## Prompt
 
@@ -9,22 +15,42 @@ General Assembly Hackathon Summer August 14th 2023
 Create a more complete, data-driven, real-time credit score software that considers a borrower's financial and credit history from the beginning of time and can be used to qualify borrowers for credit and loans. Nice to have features can include:
 consider bill payments, rent, utilities, subscriptions, and visualization of data.
 
-## Contributors:
+## Deployed Website
+
+on its way..
+![Alt Text](https://media.giphy.com/media/tBvPFCFQHSpEI/giphy.gif)
 
 ---
 
-**Vivian Huynh (UX/UI Designer)**
-[LinkedIn](https://www.linkedin.com/in/vivianhuynh23/) |
+### Dependencies
 
-<!-- [GitHub](https://github.com/NAME) -->
+- axios
+- firebase
+- framer-motion
+- react
+- react-dom
+- react-router-dom
+- recharts
+- sass
 
-**Julia Heim (UX/UI Desinger)**
-[LinkedIn](https://www.linkedin.com/in/juliarheim/) |
+## Future Features
 
-<!-- [GitHub](https://github.com/NAME) -->
+- Info modals for explanations on credit scores
+
+## Team
+
+**Alaysia Veal (Software Engineer)**
+[LinkedIn](https://www.linkedin.com/in/alaysia-veal/)
+[GitHub](https://github.com/AlaysiaVeal)
+
+**Kimberly Mannette (UX/UI Designer)**
+[LinkedIn](https://www.linkedin.com/in/kimberlymannette/) |
+[GitHub](https://github.com/kimberlymannette)
 
 **Kate Crawford (Data Science Engineer)**
-[LinkedIn](https://www.linkedin.com/in/kaitlencrawford/) |
+
+<!-- [LinkedIn](https://www.linkedin.com/in/NAME/) | -->
+
 [GitHub](https://github.com/codewithkate)
 
 **Mark Harris (Data Science Engineer)**
@@ -41,7 +67,7 @@ consider bill payments, rent, utilities, subscriptions, and visualization of dat
 [LinkedIn](https://www.linkedin.com/in/ryanehrlich/) |
 [GitHub](https://github.com/Jagerziel)
 
-## Technologies Used
+## 💻 Technologies Used
 
 ---
 
@@ -58,26 +84,3 @@ consider bill payments, rent, utilities, subscriptions, and visualization of dat
 - Git/Github
 - Nodejs
 - Vercel
-
-## Screenshots
-
----
-
-### Wireframes
-
----
-
-### Production version
-
----
-
-## Deployed Website
-
-on its way..
-![Alt Text](https://media.giphy.com/media/tBvPFCFQHSpEI/giphy.gif)
-
----
-
-## Future Enhancements
-
-- Where do we go from here?
