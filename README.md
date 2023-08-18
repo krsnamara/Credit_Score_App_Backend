@@ -20,7 +20,6 @@ consider bill payments, rent, utilities, subscriptions, and visualization of dat
 
 **Julia Heim (UX/UI Desinger)**
 [LinkedIn](https://www.linkedin.com/in/juliarheim/) |
-
 <!-- [GitHub](https://github.com/NAME) -->
 
 **Kate Crawford (Data Science Engineer)**
