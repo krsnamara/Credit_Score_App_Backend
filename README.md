@@ -1,19 +1,23 @@
-# ScoreEase
-
-General Assembly Hackathon Summer August 14th 2023!
-
 # 💸 Financial Literacy Hackathon 2023
+*General Assembly Hackathon Summer August 14th 2023*
 
-# Description
+***Result: 1st Place***
+
+
+## Hackathon Prompt
+
+Create a more complete, data-driven, real-time credit score software that considers a borrower's finanacial and credit history from the beginning of time and can be used to qualify borrowers for credit and loans. Nice to have features can include: consider bill payments, rent, utilities, subscriptions, and visualization of data.
+
+
+## Description
 
 Embark on a seamless credit journey with our innovative web application. ScoreEase introduces a user-friendly interface that seamlessly combines the power of real-time data analysis with the entirety of your financial history. Say farewell to complex credit assessments and embrace a new era of simplicity and accuracy, as ScoreEase effortlessly allows borrowers to view credit and loans by tapping into their complete financial narrative, all at your fingertips.
 
-## Prompt
+## Github Repository Links
+- Frontend Repo: https://github.com/Jagerziel/Credit_Score_App_Frontend
+- Backend Repo: https://github.com/krsnamara/Credit_Score_App_Backend
+- Data Modeling Repo: https://github.com/codewithkate/Credit_Score_App_Model
 
----
-
-Create a more complete, data-driven, real-time credit score software that considers a borrower's financial and credit history from the beginning of time and can be used to qualify borrowers for credit and loans. Nice to have features can include:
-consider bill payments, rent, utilities, subscriptions, and visualization of data.
 
 ## Deployed Website
 
