@@ -19,6 +19,47 @@ Embark on a seamless credit journey with our innovative web application. ScoreEa
 - Data Modeling Repo: https://github.com/codewithkate/Credit_Score_App_Model
 
 
+## Backend Endpoints
+
+- Home: http://localhost:4000/
+- Data: http://localhost:4000/test
+
+
+## Data Schema (Image Output Coming Soon)
+**Test Screen**
+
+The information gathered from the front end stores the user's data as they enter it on ScoreEase  The model is constructed as follows:
+
+```
+const InfoSchema = new Schema(
+  {
+    Age: { type: String },
+    NumberOfDependents: { type: String },
+    MonthlyIncome: { type: String },
+    MonthlyExpenses: { type: String },
+    Accounts: { type: String },
+    RevolvingUtilization: { type: String },
+    RealEstateLoans: { type: String },
+    ThirtyFiftyNinePastDue: { type: String },
+    SixtyEightyNinePastDue: { type: String },
+    NinetyDaysLate: { type: String },
+    Score: { type: String },
+    uid: String,
+  },
+  {
+    timestamps: true,
+  }
+);
+```
+
+Given the time constraints (3 days) for this project, a minimal structure was included however in the future this could be built out to better protect the information flowing to the database.
+
+
+
+
+
+
+
 ## Deployed Website
 
 on its way..
