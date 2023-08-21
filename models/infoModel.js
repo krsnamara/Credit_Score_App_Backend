@@ -1,30 +1,26 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const InfoSchema = new Schema(
   {
-    DOB: { type: String, required: true },
-    Delinquency: { type: String, required: true },
-    HomeOwnership: { type: String },
-    unsecuredLines: { type: Number, required: true },
-    ThirtytoFiftyNineDaysPastDue: { type: Number, required: false },
-    MonthlyExpenses: { type: Number, required: true },
-    MonthlyIncome: { type: Number, required: true },
-    NumberofOpenCreditLinesandLoans: { type: Number, required: true },
-    NumberofTimes90DaysLate: { type: Number, required: false },
-    NumberRealEstateLoansOrLines: { type: Number, required: true },
-    NumberOfTimeSixtytoEightyNineDaysPastDueNotWorse: {
-      type: Number,
-      required: false
-    },
-    NumberOfDependents: { type: Number, required: true },
-    uid: String
+    Age: { type: String },
+    NumberOfDependents: { type: String },
+    MonthlyIncome: { type: String },
+    MonthlyExpenses: { type: String },
+    Accounts: { type: String },
+    RevolvingUtilization: { type: String },
+    RealEstateLoans: { type: String },
+    ThirtyFiftyNinePastDue: { type: String },
+    SixtyEightyNinePastDue: { type: String },
+    NinetyDaysLate: { type: String },
+    Score: { type: String },
+    uid: String,
   },
   {
-    timestamps: true
+    timestamps: true,
   }
-)
+);
 
-const Info = mongoose.model('Info', InfoSchema)
+const Info = mongoose.model('Info', InfoSchema);
 
-module.exports = Info
+module.exports = Info;
